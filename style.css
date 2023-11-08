@@ -1,7 +1,6 @@
-/* -------  General Styles ------- */
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 h2 {
@@ -30,11 +29,9 @@ section.alternate-background {
   color: #fff;
 }
 
-main img {
-  width: 100px;
+img {
+  width: 100%;
 }
-
-/* ---  Groups & Items --- */
 
 .group {
   display: flex;
@@ -50,18 +47,24 @@ main img {
   flex: 2;
 }
 
-/* -------  Navigation ------- */
-
 header {
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 10px 20px;
   text-align: center;
 }
 
 .logo {
-  font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-family: 'Pangolin', cursive;
+  font-size: 42px;
   color: #fff;
+}
+
+header nav ul {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 header nav ul li {
@@ -71,7 +74,6 @@ header nav ul li {
 header nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 0 20px 0 0;
 }
 
 header nav ul li a:hover {
@@ -79,10 +81,16 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
-/* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
-  padding: 10px;
+  padding: 20px;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
 }
 
 form label {
@@ -91,7 +99,6 @@ form label {
 
 form select,
 form input {
-  margin-bottom: 20px;
   width: 180px;
 }
 
@@ -104,7 +111,17 @@ form button {
   width: 100%;
 }
 
-/* -------  Footer ------- */
+form .select {
+  display: inline-block;
+}
+
+#about img {
+  padding: 20px 0;
+}
+
+#ideas .invis-mobile {
+  display: none;
+}
 
 footer {
   background-color: #ff385c;
@@ -117,3 +134,123 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  header nav ul li {
+    padding: 0 8px;
+  }
+
+  #stay form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0px 10px;
+  }
+
+  #stay label {
+    width: 100%;
+  }
+
+  #stay .select {
+    width: 100%;
+  }
+
+  #stay button {
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+
+  #stay div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+  }
+
+  #about .about {
+    text-align: left;
+  }
+
+  #about img {
+    width: 300px;
+    padding: 10px;
+  }
+
+  #about {
+    padding: 30px;
+  }
+
+  #about .about {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  #about p {
+    width: 50%;
+  }
+
+  #ideas .ideas-group {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin:auto;
+  }
+
+  #ideas img {
+    width: 500px;
+    padding: 25px 10px;
+    align-items: center ;
+    margin: auto;
+  }
+
+  #ideas .forests {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #ideas .beaches {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #ideas .invis-mobile {
+    display: inline-block;
+  }
+
+  #ideas .rustic-cabins {
+    display: none;
+  }
+
+  #ideas .pet-friendly {
+    display: none;
+  }
+
+  #host {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  #host .host-group {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  #host img {
+    width: 50%;
+  }
+}
