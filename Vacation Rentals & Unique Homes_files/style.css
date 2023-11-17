@@ -158,11 +158,11 @@ footer p {
   }
 
   #stay div {
-    flex: 1; /* Adjust margin as needed */
+    flex: 1;
   }
 
   #stay div:last-child {
-    flex-basis: 100%; /* Make the last div take the remaining space */
+    flex-basis: 100%; 
   }
 
   #stay label {
