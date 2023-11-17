@@ -1,6 +1,7 @@
+/* -------  General Styles ------- */
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 h2 {
@@ -29,9 +30,11 @@ section.alternate-background {
   color: #fff;
 }
 
-img {
+main img {
   width: 100%;
 }
+
+/* ---  Groups & Items --- */
 
 .group {
   display: flex;
@@ -40,31 +43,30 @@ img {
 
 .item {
   flex: 1;
-  margin: 10px;
+  margin:10px;
 }
 
 .item-double {
   flex: 2;
 }
 
+/* -------  Navigation ------- */
+
 header {
   background-color: #ff385c;
-  padding: 20px 20px 10px 20px;
+  padding: 20px 20px 20px 20px;
   text-align: center;
 }
 
 .logo {
-  font-family: 'Pangolin', cursive;
-  font-size: 42px;
+  font-family: "Pangolin", cursive;
+  font-size: 50px;
   color: #fff;
 }
 
 header nav ul {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 header nav ul li {
@@ -74,6 +76,11 @@ header nav ul li {
 header nav ul li a {
   color: #fff;
   text-decoration: none;
+  padding: 0 20px 0 0;
+}
+
+header nav ul li:last-child a {
+  margin-right: 20px;
 }
 
 header nav ul li a:hover {
@@ -81,16 +88,13 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
+/* -------  Search Form ------- */
 form {
-  border: 2px solid #ff385c;
-  padding: 20px;
-}
-
-form div {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
+  border: 2px solid #ff385c;
+  padding: 10px;
 }
 
 form label {
@@ -99,7 +103,9 @@ form label {
 
 form select,
 form input {
-  width: 180px;
+  margin-bottom: 20px;
+  width: 65%;
+  float: right;
 }
 
 form button {
@@ -111,17 +117,7 @@ form button {
   width: 100%;
 }
 
-form .select {
-  display: inline-block;
-}
-
-#about img {
-  padding: 20px 0;
-}
-
-#ideas .invis-mobile {
-  display: none;
-}
+/* -------  Footer ------- */
 
 footer {
   background-color: #ff385c;
@@ -134,123 +130,56 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
 @media all and (min-width: 768px) {
   header {
+    background-color: #ff385c;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
   }
 
-  .logo {
-    font-size: 30px;
-  }
-
-  header nav ul li {
-    padding: 0 8px;
-  }
-
-  #stay form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 0px 10px;
-  }
-
-  #stay label {
-    width: 100%;
-  }
-
-  #stay .select {
-    width: 100%;
-  }
-
-  #stay button {
-    padding: 10px 20px;
-    font-size: 20px;
-  }
-
-  #stay div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 5px;
-  }
-
-  #about .about {
-    text-align: left;
-  }
-
-  #about img {
-    width: 300px;
+  header nav {
     padding: 10px;
   }
 
-  #about {
-    padding: 30px;
-  }
-
-  #about .about {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
+  form {
     flex-direction: row;
   }
 
-  #about p {
-    width: 50%;
-  }
-
-  #ideas .ideas-group {
+  .group {
     display: flex;
-    justify-content: space-between;
-    width: 1000px;
-    margin:auto;
-  }
-
-  #ideas img {
-    width: 500px;
-    padding: 25px 10px;
-    align-items: center ;
-    margin: auto;
-  }
-
-  #ideas .forests {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #ideas .beaches {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #ideas .invis-mobile {
-    display: inline-block;
-  }
-
-  #ideas .rustic-cabins {
-    display: none;
-  }
-
-  #ideas .pet-friendly {
-    display: none;
-  }
-
-  #host {
-    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: row nowrap;
     align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
   }
 
-  #host .host-group {
-    display: flex;
+  .vacation-form .item {
+    display: flex block;
+    flex: auto;
     flex-direction: column;
-    padding: 20px;
   }
 
-  #host img {
-    width: 50%;
+  .item label, 
+  .item input, 
+  .item select, 
+  .item button {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .grid-column {
+    display: flex;
+    flex: 1;
+    flex-direction: column; 
+    margin: 10px;
+  }
+
+  .grid-row {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
   }
 }
